@@ -1,10 +1,8 @@
-.main {
-}
 .first-block {
   background-color: #0c003d5b;
   background: url("../assets/img/bg.png");
   background-repeat: no-repeat;
-   background-size: cover;
+  background-size: cover;
   background-position: right bottom;
   @media (max-width: 723px) {
     background-size: 200% auto;
@@ -24,7 +22,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    @media (max-width: 723px){
+    @media (max-width: 723px) {
       justify-content: space-between;
       padding-bottom: 50px;
     }
@@ -33,22 +31,18 @@
   // .first-block__title
 
   &__title {
-    font-family: "Bebas Neue";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 100px;
-    line-height: 100%;
-    letter-spacing: -0.005em;
-    color: #ffffff;
     margin-bottom: 50px;
-    @media (max-width: 723px) {
-      font-size: 66px;
-    }
-    & span {
-      background: linear-gradient(99.41deg, #ffb018 -12.63%, #ff2900 84.78%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      color: #ffb018;
+    position: relative;
+    z-index: 3;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #24015327;
+      z-index: -5;
     }
   }
 
@@ -57,59 +51,235 @@
   &__button {
     align-self: flex-start;
   }
+}
 
-  //.button
-  .button {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 116.7%;
+.planet-slider {
+  margin-top: -20px;
+  padding-bottom: 65px;
+  // .planet-slider__container
+
+  &__container {
+  }
+
+  // .planet-slider__title
+
+  &__title {
+    font-family: "Bebas Neue";
+    font-weight: 400;
+    font-size: 55px;
+    line-height: 109%;
+    text-align: center;
     color: #ffffff;
-    padding: 25px 27px 25px 33px;
-    background: linear-gradient(99.41deg, #ffb018 -12.63%, #ff2900 84.78%);
-    border: 3px solid #ffffff;
-    border-radius: 133.962px;
-    display: flex;
-    column-gap: 67px;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    overflow: hidden;
+    margin-bottom: 72px;
     @media (max-width: 723px) {
-      width: 100%;
-      font-size: 18px;
+      font-size: 35px;
+      margin-bottom: 32px;
+    }
+  }
 
+  // .planet-slider__main-content
+
+  &__main-content {
+  }
+
+  // .planet-slider__slider
+
+  &__slider {
+  }
+
+  // .planet-slider__wrapper
+
+  &__wrapper {
+  }
+
+  // .planet-slider__slide
+
+  &__slide {
+  }
+}
+.swiper-slide {
+  text-align: center;
+
+  //.swiper-slide__block
+
+  &__block {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+    .swiper-slide-active & {
+      margin-bottom: 0px;
+    }
+    @media (max-width: 797.98px) {
+      max-width: 400px;
+    }
+  }
+
+  // .swiper-slide__picture
+
+  &__picture {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    margin-bottom: 13px;
+    transition: all 0.3s ease 0s;
+    .swiper-slide-active & {
+      transform: scale(1.3);
+      height: 300px;
+      margin-bottom: 15px;
+    }
+    & img {
+      position: absolute;
+      object-fit: cover;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -46%);
+    }
+  }
+
+  // .swiper-slide__text
+
+  &__text {
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 29.2px;
+    line-height: 116.5%;
+    text-align: center;
+    color: #ffffff;
+    padding: 130px 32px 20px 32px;
+    margin-top: -130px;
+    background: linear-gradient(
+      180deg,
+      rgba(38, 1, 83, 0) 14.62%,
+      #250153 100%
+    );
+    border-radius: 19.4705px;
+    .swiper-slide-active & {
+      background: linear-gradient(
+        180deg,
+        rgba(255, 7, 114, 0) 12.91%,
+        #ff5a09 88.32%
+      );
+    }
+  }
+
+  // .swiper-slide__name
+
+  &__name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 10.5px;
+    margin-bottom: 7px;
+    &::after {
+      content: "";
+      width: 40px;
+      height: 3px;
+      background: linear-gradient(99.41deg, #ffb018 -12.63%, #ff2900 84.78%);
+      border-radius: 30px;
+    }
+    .swiper-slide-active & {
+      &::after {
+        background: #fff;
+      }
+    }
+  }
+
+  // .swiper-slide__description
+
+  &__description {
+    font-size: 34.07px;
+    line-height: 120%;
+  }
+}
+
+.destination {
+  padding-top: 65px;
+  padding-bottom: 65px;
+
+  // .destination__container
+
+  &__container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      right: -347px;
+      width: 456px;
+      height: 304px;
+      background: url("../assets/img/content/rocket.png") 0 0 / contain
+        no-repeat;
     }
     &::after {
       content: "";
-      width: 24.11px;
-      height: 18.75px;
-      background: url("../assets/img/icons/arrow.svg") 0 0 / cover no-repeat;
+      position: absolute;
+      bottom: -450px;
+      right: -366px;
+      width: 857.5px;
+      height: 560px;
+      background: url("../assets/img/content/Vector2.svg") 0 0 / contain
+        no-repeat;
+    }
+    @media (max-width: 767.98px) {
+      flex-direction: column;
+    }
+  }
+
+  // .destination__column
+
+  &__picture {
+    flex: 0 1 55%;
+    position: relative;
+    z-index: 2;
+    & img {
+      max-width: 100%;
+      max-height: 100%;
     }
     &::before {
       content: "";
       position: absolute;
-      top: -40px;
-      left: -40px;
-      width: 20px;
-      height: 150px;
-      background: rgb(255, 255, 255);
-      background: linear-gradient(
-        260deg,
-        rgba(255, 255, 255, 0.3080053746526512) 17%,
-        rgba(255, 255, 255, 0.29634356707247633) 25%,
-        rgba(251, 251, 251, 1) 38%,
-        rgba(251, 251, 251, 1) 45%,
-        rgba(255, 255, 255, 0.6607750539529428) 62%
-      );
-      transform: rotate(45deg);
+      top: 50px;
+      left: -50px;
+      width: 160px;
+      height: 160px;
+      background: url("../assets/img/content/planet.png") 0 0 / cover no-repeat;
     }
-    &:hover {
+    @media (max-width: 991.98px) {
       &::before {
-        left: 110%;
-        transition: 0.5s ease-in-out;
+        display: none;
       }
     }
+  }
+  &__content {
+    flex: 0 1 45%;
+    z-index: 2;
+  }
+  // .destination__title
+
+  &__title {
+    margin-bottom: 32px;
+    position: relative;
+    @media screen {
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: -138px;
+      right: -248px;
+      width: 524px;
+      height: 385px;
+      background: url("../assets/img/content/asteroids.png");
+    }
+  }
+
+  // .destination__button
+
+  &__button {
   }
 }
