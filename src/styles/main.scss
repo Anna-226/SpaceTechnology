@@ -35,7 +35,7 @@
     position: relative;
     z-index: 3;
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -56,6 +56,10 @@
 .planet-slider {
   margin-top: -20px;
   padding-bottom: 65px;
+  @media (max-width: 723px) {
+    margin-top: 0px;
+    padding-bottom: 35px;
+  }
   // .planet-slider__container
 
   &__container {
@@ -199,39 +203,72 @@
 .destination {
   padding-top: 65px;
   padding-bottom: 65px;
+  @media (max-width: 723px) {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
 
   // .destination__container
 
   &__container {
-    display: flex;
-    align-items: center;
-    position: relative;
+  }
+}
+.text-block {
+  display: flex;
+  align-items: center;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 456px;
+    height: 304px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 857.5px;
+    height: 560px;
+  }
+  @media (max-width: 767.98px) {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    gap: 25px;
     &::before {
-      content: "";
-      position: absolute;
+      display: none;
+    }
+  }
+  // .text-block_first
+  &_first {
+    &::before {
       top: -10px;
       right: -347px;
-      width: 456px;
-      height: 304px;
       background: url("../assets/img/content/rocket.png") 0 0 / contain
         no-repeat;
     }
     &::after {
-      content: "";
-      position: absolute;
-      bottom: -450px;
-      right: -366px;
-      width: 857.5px;
-      height: 560px;
+      top: -150px;
+      left: -100px;
+      background: url("../assets/img/content/Vector1.svg") 0 0 / contain
+        no-repeat;
+    }
+  }
+  &_second {
+    &::before {
+      bottom: -220px;
+      left: -118px;
+      background: url("../assets/img/content/rocket2.png") 0 0 / contain
+        no-repeat;
+    }
+    &::after {
+      top: -250px;
+      right: -300px;
       background: url("../assets/img/content/Vector2.svg") 0 0 / contain
         no-repeat;
     }
-    @media (max-width: 767.98px) {
-      flex-direction: column;
-    }
   }
 
-  // .destination__column
+  // .text-block__picture
 
   &__picture {
     flex: 0 1 55%;
@@ -241,32 +278,40 @@
       max-width: 100%;
       max-height: 100%;
     }
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50px;
-      left: -50px;
-      width: 160px;
-      height: 160px;
-      background: url("../assets/img/content/planet.png") 0 0 / cover no-repeat;
-    }
-    @media (max-width: 991.98px) {
+    // .text-block__picture_first
+    &_first {
       &::before {
-        display: none;
+        content: "";
+        position: absolute;
+        top: 50px;
+        left: -50px;
+        width: 160px;
+        height: 160px;
+        background: url("../assets/img/content/planet.png") 0 0 / cover
+          no-repeat;
+      }
+      @media (max-width: 767.98px) {
+        order: 2;
+      }
+      @media (max-width: 991.98px) {
+        &::before {
+          display: none;
+        }
       }
     }
   }
+
+  // .text-block__content
+
   &__content {
     flex: 0 1 45%;
     z-index: 2;
   }
-  // .destination__title
+
+  // .text-block__title
 
   &__title {
-    margin-bottom: 32px;
     position: relative;
-    @media screen {
-    }
     &::after {
       content: "";
       position: absolute;
@@ -274,12 +319,47 @@
       right: -248px;
       width: 524px;
       height: 385px;
+      z-index: -1;
       background: url("../assets/img/content/asteroids.png");
+    }
+    //.text-block__title_left
+    &_left {
+      &::after {
+        top: 25px;
+        left: -330px;
+      }
     }
   }
 
-  // .destination__button
+  // .text-block__text
+
+  &__text {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 167%;
+    color: #ffffff;
+    margin-top: 19px;
+  }
+  // .text-block__button
 
   &__button {
+    margin-top: 45px;
+    @media (max-width: 767.98px) {
+      margin: 45px auto 0;
+    }
+  }
+}
+
+.expirience {
+  padding-top: 65px;
+  padding-bottom: 65px;
+  @media (max-width: 723px) {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+  // .expirience__container
+
+  &__container {
   }
 }
