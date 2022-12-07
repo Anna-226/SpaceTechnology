@@ -255,8 +255,10 @@
   }
   &_second {
     &::before {
-      bottom: -220px;
-      left: -118px;
+      width: 300px;
+      height: 250px;
+      bottom: -150px;
+      left: -200px;
       background: url("../assets/img/content/rocket2.png") 0 0 / contain
         no-repeat;
     }
@@ -361,5 +363,161 @@
   // .expirience__container
 
   &__container {
+  }
+}
+
+.subscribe {
+  padding-top: 65px;
+  padding-bottom: 65px;
+  @media (max-width: 723px) {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+
+  // .subscribe__container
+
+  &__container {
+  }
+
+  // .subscribe__block
+
+  &__block {
+    padding: 103px 15px;
+    text-align: center;
+    background: linear-gradient(
+      100.13deg,
+      #6f26bb -32.91%,
+      rgba(111, 38, 187, 0) 160.1%,
+      #6f26bb 160.1%
+    );
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 45%;
+      height: 100%;
+      background: url("../assets/img/content/rocket-orange.png") 0 0 / cover
+        no-repeat;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 25%;
+      height: 50%;
+      background: url("../assets/img/content/asteroids2.png") 0 0 / cover
+        no-repeat;
+    }
+  }
+
+  // .subscribe__title
+
+  &__title {
+    font-family: "Bebas Neue";
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 107%;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 34.72px;
+    position: relative;
+    z-index: 1;
+    @media (max-width: 767.98px) {
+      font-size: 40px;
+    }
+  }
+
+  // .subscribe__form
+
+  &__form {
+    max-width: 550px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  // .subscribe__item
+
+  &__item {
+    height: 69px;
+    width: 100%;
+    background: #3e0174;
+    border: 1.725px solid #3a036a;
+    border-radius: 100.846px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  // .subscribe__input
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    padding-left: 42px;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 181%;
+    letter-spacing: 0.015em;
+    color: #ffffff;
+    &::placeholder {
+      font-family: "Roboto";
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 181%;
+      letter-spacing: 0.015em;
+      color: #ffffff9c;
+    }
+  }
+
+  // .subscribe__button
+
+  &__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 34px;
+    padding-left: 34px;
+    height: 98%;
+    background: linear-gradient(99.41deg, #ff2900 -0.56%, #ffb018 123.55%);
+    overflow: hidden;
+    border-radius: 0 100.846px 100.846px 0;
+    @media (max-width: 479.98px) {
+      position: relative;
+      padding: 18px 34px;
+      border-radius: 100.846px;
+      margin-top: 30px;
+      width: 100%;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      left: -50px;
+      width: 20px;
+      height: 150px;
+      background: rgb(255, 255, 255);
+      background: linear-gradient(
+        260deg,
+        rgba(255, 255, 255, 0.3080053746526512) 17%,
+        rgba(255, 255, 255, 0.29634356707247633) 25%,
+        rgba(251, 251, 251, 1) 38%,
+        rgba(251, 251, 251, 1) 45%,
+        rgba(255, 255, 255, 0.6607750539529428) 62%
+      );
+      transform: rotate(45deg);
+    }
+    &:hover {
+      &::before {
+        left: 130%;
+        transition: 0.5s ease-in-out;
+      }
+    }
   }
 }
