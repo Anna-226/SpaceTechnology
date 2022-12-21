@@ -17,11 +17,11 @@
             <div class="header__menu menu">
                <nav class="menu__body">
                   <ul class="menu__list">
-                     <li class="menu__item"><a href="" class="menu__link">Home</a></li>
-                     <li class="menu__item"><a href="" class="menu__link">Earth</a></li>
-                     <li class="menu__item"><a href="" class="menu__link">Insights</a></li>
-                     <li class="menu__item"><a href="" class="menu__link">Plans</a></li>
-                     <li class="menu__item"><a href="" class="menu__link">Contact</a></li>
+                     <li class="menu__item"><a href="#up" class="menu__link">Home</a></li>
+                     <li class="menu__item"><a href="#earth" class="menu__link">Earth</a></li>
+                     <li class="menu__item"><a href="#insights" class="menu__link">Insights</a></li>
+                     <li class="menu__item"><a href="#plans" class="menu__link">Plans</a></li>
+                     <li class="menu__item"><a href="#contact" class="menu__link">Contact</a></li>
                   </ul>
                </nav>
             </div>
@@ -31,15 +31,15 @@
          </div>
       </header>
       <main class="main">
-         <section class="first-block">
+         <section class="first-block" id="up">
             <div class="first-block__container">
                <div class="first-block__content">
                   <h1 class="first-block__title title">put your footprint in <span>space travel</span></h1>
-                  <button class="first-block__button button">Get Started</button>
+                  <button class="first-block__button button button-modal">Get Started</button>
                </div>
             </div>
          </section>
-         <section class="planet-slider">
+         <section class="planet-slider" id="earth">
             <div class="planet-slider__container">
                <h2 class="planet-slider__title">Enjoying Space Like Never Before</h2>
                <div class="planet-slider__main-content">
@@ -77,36 +77,36 @@
                </div>
             </div>
          </section>
-         <section class="destination">
+         <section class="destination" id="insights">
             <div class="destination__container text-block text-block_first">
                <div class="text-block__picture text-block__picture_first">
                   <img src="assets/img/content/cosmonaut.png" alt="cosmonaut">
                </div>
                <div class="text-block__content">
                   <h2 class="text-block__title title">Destinations you can visit <br> <span>without a visa</span></h2> 
-                  <button class="text-block__button button">Contact us</button>
+                  <button class="text-block__button button button-modal">Contact us</button>
                </div>
             </div>
          </section>
-         <section class="expirience">
+         <section class="expirience" id="plans">
             <div class="expirience__container text-block text-block_second">
                <div class="text-block__content">
                   <h2 class="text-block__title text-block__title_left title">Ultimate Experience  for  <br> <span>outer space Travel</span></h2>
                   <p class="text-block__text">Get the latest space exploration, innovation and astronomy news. Space.com celebrates humanity's ongoing expansion across the final frontier.</p>
-                  <button class="text-block__button button">Contact us</button>
+                  <button class="text-block__button button button-modal">Contact us</button>
                </div>
                <div class="text-block__picture">
                   <img src="assets/img/content/cosmonaut2.png" alt="cosmonaut">
                </div>
             </div>
          </section>
-         <section class="subscribe">
+         <section class="subscribe" id="contact">
             <div class="subscribe__container">
                <div class="subscribe__block">
                   <h3 class="subscribe__title">Subscribe To Get The Latest News About Us</h3>
                   <form class="subscribe__form" action="">
                      <div class="subscribe__item">
-                        <input autocomplete="off" type="text" name="subscribe" data-error="Ошибка" placeholder="Enter your email" class="subscribe__input">
+                        <input type="text" name="subscribe" placeholder="Enter your email" class="subscribe__input" required>
                      </div>
                      <button class="subscribe__button">Subscribe</button>
                   </form>
@@ -121,30 +121,36 @@
                   <a href="#"><img src="assets/img/logo.svg" alt="logo"></a>
                </div>
                <div class="footer__links">
-                  <ul class="footer__column links-list">
+                  <div class="footer__column links-list">
                      <div class="links-list__title">Products</div>
-                     <li class="links-list__item"><a href="#">Squat Rack</a></li>
-                     <li class="links-list__item"><a href="#">Power Tower</a></li>
-                     <li class="links-list__item"><a href="#">Explorer</a></li>
-                     <li class="links-list__item"><a href="#">Price</a></li>
-                     <li class="links-list__item"><a href="#">Institutional</a></li>
-                  </ul>
-                  <ul class="footer__column links-list">
-                     <div class="links-list__title">Products</div>
-                     <li class="links-list__item"><a href="#">Squat Rack</a></li>
-                     <li class="links-list__item"><a href="#">Power Tower</a></li>
-                     <li class="links-list__item"><a href="#">Explorer</a></li>
-                     <li class="links-list__item"><a href="#">Price</a></li>
-                     <li class="links-list__item"><a href="#">Institutional</a></li>
-                  </ul>
-                  <ul class="footer__column links-list">
-                     <div class="links-list__title">Products</div>
-                     <li class="links-list__item"><a href="#">Squat Rack</a></li>
-                     <li class="links-list__item"><a href="#">Power Tower</a></li>
-                     <li class="links-list__item"><a href="#">Explorer</a></li>
-                     <li class="links-list__item"><a href="#">Price</a></li>
-                     <li class="links-list__item"><a href="#">Institutional</a></li>
-                  </ul>
+                     <ul class="link-list__block">
+                        <li class="links-list__item"><a href="#">Squat Rack</a></li>
+                        <li class="links-list__item"><a href="#">Power Tower</a></li>
+                        <li class="links-list__item"><a href="#">Explorer</a></li>
+                        <li class="links-list__item"><a href="#">Price</a></li>
+                        <li class="links-list__item"><a href="#">Institutional</a></li>
+                     </ul>
+                  </div>
+                  <div class="footer__column links-list">
+                     <div class="links-list__title">Resources</div>
+                     <ul class="link-list__block">
+                        <li class="links-list__item"><a href="#">APIs</a></li>
+                        <li class="links-list__item"><a href="#">Status</a></li>
+                        <li class="links-list__item"><a href="#">Open Source</a></li>
+                        <li class="links-list__item"><a href="#">Research</a></li>
+                        <li class="links-list__item"><a href="#">Security</a></li>
+                     </ul>
+                  </div>
+                  <div class="footer__column links-list">
+                     <div class="links-list__title">Company</div>
+                     <ul class="link-list__block">
+                        <li class="links-list__item"><a href="#">About</a></li>
+                        <li class="links-list__item"><a href="#">Careers Hiring</a></li>
+                        <li class="links-list__item"><a href="#">Press Center</a></li>
+                        <li class="links-list__item"><a href="#">Prime</a></li>
+                        <li class="links-list__item"><a href="#">Ventures</a></li>
+                     </ul>
+                  </div>
                   <div class="footer__social social-icons">
                      <div class="social-icons__title">Our Social Media</div>
                      <div class="social-icons__block">
@@ -164,6 +170,21 @@
             </div>
          </div>
       </footer>
+      <div class='popup' data-modal>
+         <div class='popup__dialog'>
+            <div class='popup__content'>
+               <button class='popup__close'>&times;</button>
+               <h4 class='popup__title'>Leave your contacts and we will call you</h4>
+               <div class='popup__form'>
+                  <form class='form' action=# method='POST'>
+                     <input class='form__input' type='text' name='name' placeholder="Name" required>
+                     <input class='form__input form__input_phone' type='text' name='phone' placeholder="Phone" required>
+                     <button class="form__button button">Call me</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
    </div>
 </body>
 </html>

@@ -26,7 +26,10 @@
   // .footer__logo
 
   &__logo {
-    flex: 1 1 33%;
+    flex: 1 1 33%;  
+    @media (max-width: 1200px) {
+    flex: 1 1 auto;
+  }
   }
 
   // .footer__links
