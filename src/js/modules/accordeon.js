@@ -1,10 +1,10 @@
 const accordeon = (triggerSelector, blockSelector) => {
    const titles = document.querySelectorAll(triggerSelector),
          blocks = document.querySelectorAll(blockSelector);
-   
+   console.log(blocks)
    titles.forEach((title, i) => {
       title.addEventListener('click', () => {
-         if (window.innerWidth <= 950 ) {
+         if (window.innerWidth <= 750 ) {
             if (!title.classList.contains('active')) {
                showBlock(titles, i);
             } else {
@@ -19,6 +19,7 @@ const accordeon = (triggerSelector, blockSelector) => {
    });
    function showBlock(elems, n) {
       hideAll();
+      
       blocks[n].style.display = 'block';
       blocks[n].previousElementSibling.classList.add('active');
    }

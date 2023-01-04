@@ -21,15 +21,22 @@
     justify-content: space-between;
     border-bottom: 2px solid #330f6f;
     padding-bottom: 53.7px;
+    @media (max-width: 850px) {
+      flex-direction: column;
+    }
   }
 
   // .footer__logo
 
   &__logo {
-    flex: 1 1 33%;  
+    flex: 1 1 33%;
     @media (max-width: 1200px) {
-    flex: 1 1 auto;
-  }
+      flex: 1 1 auto;
+    }
+    @media (max-width: 850px) {
+      margin-bottom: 30px;
+      text-align: center;
+    }
   }
 
   // .footer__links
@@ -39,6 +46,11 @@
     display: flex;
     justify-content: space-between;
     gap: 30px;
+    @media (max-width: 750px) {
+      flex-direction: column;
+      text-align: center;
+      align-items: stretch;
+    }
   }
 
   // .footer__column
@@ -49,6 +61,9 @@
   // .footer__social
 
   &__social {
+    @media (max-width: 750px) {
+      align-self: center;
+    }
   }
 
   // .footer__second-floor
@@ -60,6 +75,9 @@
     justify-content: space-between;
     align-items: center;
     gap: 30px;
+    @media (max-width: 767.98px) {
+    flex-direction: column;
+  }
   }
 
   // .footer__copyright
@@ -73,21 +91,45 @@
   }
 }
 .links-list {
+  @media (max-width: 750px) {
+    &:not(:last-child) {
+      border-bottom: 2px solid #330f6f;
+    }
+  }
+
   // .links-list__title
 
   &__title {
     font-weight: 500;
     font-size: 20px;
-    margin-bottom: 25px;
+    padding-bottom: 25px;
+    @media (max-width: 750px) {
+      cursor: pointer;
+    }
+  }
+
+  // .links-list__block
+  &__block {
+    @media (max-width: 750px) {
+      display: none;
+      padding-bottom: 30px;
+    }
   }
 
   // .links-list__item
 
   &__item {
+    transition: all 0.3s ease 0s;
     &:not(:last-child) {
       margin-bottom: 16.5px;
     }
+    &:hover{
+      color: #ff5a09;
+    }
   }
+}
+.active {
+  color: #ff5a09;
 }
 .social-icons {
   // .social-icons__title
@@ -107,9 +149,13 @@
     justify-content: space-between;
   }
 
-  // .social-icons__twitter
+  // .social-icons__item
 
-  &__twitter {
+  &__item {
+    transition: all 0.3s ease 0s;
+    &:hover{
+      transform: scale(1.1);
+    }
   }
 }
 .privacy {

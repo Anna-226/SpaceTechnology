@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
    mask('.form__input_phone');
    forms();
    scrolling();
-   accordeon('.links-list__title', '.link-list__block');
+   accordeon('.links-list__title', '.links-list__block');
    const swiper = new Swiper('.swiper', {
       loop: true,
       spaceBetween: 23,
@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
          0: {
             slidesPerView: 1
          },
-         797.98: {
+         924: {
             slidesPerView: 3,
          }
       }
